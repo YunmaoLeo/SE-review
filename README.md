@@ -24,7 +24,20 @@
 - [Lecture 07 Specifications](#lecture-07-specifications)
   - [Specification](#specification)
   - [Specification review](#specification-review)
-  - [Lecture 08 Prototypes](#lecture-08-prototypes)
+- [Lecture 08 Prototypes](#lecture-08-prototypes)
+  - [Prototyping Risks](#prototyping-risks)
+- [Lecture 09 OODesignAndTestPlan](#lecture-09-oodesignandtestplan)
+  - [Class Description Documents](#class-description-documents)
+  - [Test Plans](#test-plans)
+  - [Test Plans的用处](#test-plans的用处)
+  - [Overall Document of Test Plans](#overall-document-of-test-plans)
+  - [Types of test plans:](#types-of-test-plans)
+- [Lecture 10 Implemetation & Debug](#lecture-10-implemetation--debug)
+  - [Key Concerns for SE Dev:](#key-concerns-for-se-dev)
+  - [Comment-Driven Development](#comment-driven-development)
+  - [Bug trackers](#bug-trackers)
+  - [Debugging](#debugging)
+  - [Paired Coding](#paired-coding)
 ## Lecture 02 Git projects
 
 ### git
@@ -205,4 +218,101 @@
   + ``Realism check`` 现实检测，这些specifications都能够被实现吗
   + ``Verifability checks`` 验证性检查，这些specifications都可以被测试吗？
 
-### Lecture 08 Prototypes
+## Lecture 08 Prototypes
+
+### Prototyping Risks
++ 为了高逼真度的原型花费了太多的时间或经历
++ 特定的原型代码可以重复利用，但是他们并没有一个专业的水平
++ 原型可能不足以用作软件维护阶段
++ 原型可能会被错误的利益相关者通过，（经理通过了，但经理不是终端使用者）
+
+
+## Lecture 09 OODesignAndTestPlan
+
+### Class Description Documents
++ Adding detial to Classes
++ Both guide developers and act as v1 of documentation
+  + for each variable:
+    + data format
+    + what will it be used for
+  + for each method/function
+    + 方法会接收到什么信息，（原因）
+    + 它做什么
+    + 输出什么
+    + 谁会使用这个方法
+  + 最后：该怎么知道它会按照希望的方法进行工作
+
+### Test Plans
++ 当一个程序员结束制造某个事情后决定的
++ 用于``Test Driven Develpment``
+
+<br>
+
++ Development Test Plans(Unit Testing)
+  + 证明一个类的功能是正确的
+  + 谁来做，使用什么数据，在什么平台
++ Ststem/Integration Test Plans(System/Integration Testing)
+  + 证明这个软件是符合specifications的要求的
+  + 测试类和类之间的关联的测试
+  + 检查组件接口是否正确
++ Acceptance Test Plans
+  + 证明软件符合requirements的需求
+  + 通常有客户来做，所以是他们``accept``接受了软件
+  
+### Test Plans的用处
++ 开发者用TP来测试代码
++ 管理者用TP来估计测试的工作量，然后来安排他们，把这些涵盖在预算内
++ ``Testing documentations serves as evidence``开发文档是面向客户的证据，证明有适宜的软件工程
+
+### Overall Document of Test Plans
++ Testing Process 测试流程：描述实用的方法
++ Requirements Traceability: 将requirements 和test结合在一起，回溯性
++ Test Items: list of things to be tested
++ Testing Schedule
++ Testing Recording Procedure 记录测试的结果
++ Hardware/Software Requiremtns - for testing machines 
++ Constraints -  number of people, machines, and etc. needed
++ System Tests - a list of all the exact test cases that will be tested
+
+### Types of test plans:
++ Validation Testing:
+  + 展示软件流程可以得到正确的结果的测试
++ Defect Testing
+  + 测试软件不会中断的测试（一些不正确的数据输入）
+  + 制作validation test是一个普遍的错误
+
+## Lecture 10 Implemetation & Debug
+
+### Key Concerns for SE Dev:
++ Conventions for ``Good Code``
++ 8 guidelines for dependable systems:
+  + 控制程序内信息的可见性
+  + 检查所有的输入有效性
+  + 为所有的异常都准备处理handler
+  + 尽可能减少使用容易出错的构造
+  + 提供重启的能力
+  + 检查数据的边界
+  + 调用外部构造的时候，涵盖时间控制``include timeouts``
+  + 给所有表达真实世界的值的常数取名
+
+### Comment-Driven Development
++ Strategy: 先写注释，然后根据注释写代码
+
+### Bug trackers
++ ``bugzilla.org`` 就是一个开源的web bug tracker from Mozilla
++ 这些bug追踪器帮助我们判断defect
+
+### Debugging
++ 使用``breakpoints``断点
++ Variable Inspection 在代码停止运行后，获取当前的变量
++ Trace Tables
+  + 让系统追踪某个特定的变量，来查看他们在运行过程中的改变
++ Exception-based Breakpoints
+  + 在得到错误之后暂停，这样就可以判断所有事情了
+
+### Paired Coding
++ 有一个人来负责思考，检查其他人的代码
++ 好处：解决问题和写代码这两件事情被分开了
+  + 没有某个单独的人知道代码是怎么运行的
+  + 他有一个内置的非正式审查流程``informal review process``
+  + 良好的做法非正式地散布在团队中

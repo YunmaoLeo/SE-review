@@ -38,6 +38,18 @@
   - [Bug trackers](#bug-trackers)
   - [Debugging](#debugging)
   - [Paired Coding](#paired-coding)
+- [Lecture 11 TestDrivenDevelopment](#lecture-11-testdrivendevelopment)
+  - [White/Black Box Testing](#whiteblack-box-testing)
+  - [Automated vs Manual Testing](#automated-vs-manual-testing)
+  - [Test-Driven Development](#test-driven-development)
+  - [JUnit:](#junit)
+  - [该怎么判断好的测试：](#该怎么判断好的测试)
+- [Lecture 12 ReleaseTesting & Acceptance Testing](#lecture-12-releasetesting--acceptance-testing)
+  - [Subsystems integration Testing](#subsystems-integration-testing)
+  - [Release Testing](#release-testing)
+  - [Release Testing Strategies](#release-testing-strategies)
+  - [Difference of Integration vs. Release Testing:](#difference-of-integration-vs-release-testing)
+  - [Acceptance Teting:](#acceptance-teting)
 ## Lecture 02 Git projects
 
 ### git
@@ -316,3 +328,102 @@
   + 没有某个单独的人知道代码是怎么运行的
   + 他有一个内置的非正式审查流程``informal review process``
   + 良好的做法非正式地散布在团队中
+
+## Lecture 11 TestDrivenDevelopment
+### White/Black Box Testing
++ White Box Testing:
+  + 知道代码应该要怎样工作
+  + 测试者是可以看见代码的
++ Black Box Testing:
+  + 测试者不知道代码是如何工作的
+  + 通常是在运行已经编译好的版本
+  + 通常适用于``release testing`` and ``user acceptance testing``
+
+### Automated vs Manual Testing
++ Automated:
+  + 大量的脚本或代码测试
+  + 检测服务器压力，上线时间
++ Manual：
+  + 更高等级，测试人机交互的实例
+  + 通常在每个关键环节的末尾进行``end of key stages``
+  + 通常在已经做好准备测试的代码版本上
+
+### Test-Driven Development
++ 每次运行代码，都自动运行测试代码
++ 这是一种``white box testing``
++ 可以在不同的等级进行，不论是unit还是integration
++ 优点
+  + 将``specification, coding and testing``结合在了一起
+  + 这同样是documentation的一部分
+  + 在写代码之前就思考了代码是如何被使用的
+  + ``you code to the big picture, not the current function``
+  + 当对代码修改时，可以帮助检查是否有问题
++ 写test-driven development的法则：
+  + 一定要在写代码之前写好unit tests
+  + 1. 创建一个会失败的unit test
+  + 2. 写可以编译通过比较比较好的unit tests
+  + 3. 写可以通过unit tests 的代码
+
+
+### JUnit:
++ ``@BeforeAll``  ``@AfterAll``
++ ``@BeforeEach``  ``AfterEach`` 在每个测试case执行前运行
+
+### 该怎么判断好的测试：
++ Line Coverage 行覆盖:
+  + 是否每一行的代码都被测试到了
++ Function Coverage 函数覆盖
++ Condition Coverage:
+  + 是否每一个evaluation point都被测试了
++ Path Coverage:
+  + 是否每一种可能的代码路径都被测试到了(branch if)
++ Entry/Exit coerage
+  + 是否每一个call/return选项都被测试到了
+
+
+## Lecture 12 ReleaseTesting & Acceptance Testing
+
+### Subsystems integration Testing
++ Test: ``combinations of pieces(subsystems)``
++ output: Bug reports
++ Speed: (few minutes or more) 
+
+``Unit test 70% > Integration tests > E2E tests``
+
+### Release Testing
++ 在Unit Testing 和 Sub-System integration testing之后进行
+  + 一旦完整的系统准备好了作为一个整体进行测试
+  + 用于测试系统是否符合完整的specification
+  + 包含了non-functional specification
++ 这一环节旨在发现系统不同组件之间的意外交互产生的问题或结果
+
++ Primary Goal
+  + 让公司信服，现在软件足够好，可以给到客户了
+  + 最后就是签字批准
++ 团队目标：在软件没有准备好acceptance test之前进行release test做好准备
+
+
+### Release Testing Strategies
++ Strategies:
+  + Performance driven
+    + 测试系统的上限，对于分布式系统更为有效
+  + Requirement driven
+    + 根据不同的specification制定一系列的测试
+  + Scenario driven
+    + 作为一个情景角色去使用这个软件，既要故意犯错误，也要做正确的行为
+    + 通常可以用于测试几种单独的需求
+  + Load testing before releasing:
+    + 团队要制作一个表格或图标来展示 关键指标（延迟latency和错误率error rate）在不同传入请求的速率的情况下 如何变化
+
+### Difference of Integration vs. Release Testing:
++ 1. 一个没有参与到系统开发的团队应该用于release testing
++ 2. release testing的目的是检查系统是否符合specifications，是否足够好来拟合外部的需求`external use`
++ 3. release testing 是``validation testing`` 而不是 ``defect testing``
++ 4. 是 ``Black-Box``,测试人员无法看到源代码
+
+### Acceptance Teting:
++ 由客户来进行正式测试，将现实数据放进去应用
++ Process
+  + Alpha testing: 先由一群和开发团队工作接触较多的客户进行第一批测试
+  + Beta testing: 更大批的一群客户在开发环境提出问题
+  + Acceptance testing: 客户测试系统，并决定接受还是拒绝

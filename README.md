@@ -69,6 +69,29 @@
   - [Emergency Changes](#emergency-changes)
 - [Lecture 15 Plan vs. Agile Methodologies](#lecture-15-plan-vs-agile-methodologies)
   - [传统软件制作的问题 ``concern with Traditional Methods``](#传统软件制作的问题-concern-with-traditional-methods)
+  - [Agile Principles](#agile-principles)
+  - [How to do Agile](#how-to-do-agile)
+  - [``Scrum``, ``Kanban``, ``XP``](#scrum-kanban-xp)
+  - [eXtreme Programming](#extreme-programming)
+  - [Scrum](#scrum)
+  - [Scrum Events:](#scrum-events)
+  - [Kanba](#kanba)
+  - [Agile vs. Traditional](#agile-vs-traditional)
+  - [Waterfall Pros 优点：](#waterfall-pros-优点)
+  - [Waterfall Cons 缺点](#waterfall-cons-缺点)
+  - [Agile Pros 优点：](#agile-pros-优点)
+  - [Agile Cons 缺点:](#agile-cons-缺点)
+  - [Agile Methods:](#agile-methods)
+- [Lecture 16 Software Quality](#lecture-16-software-quality)
+  - [Software Quality Tram:](#software-quality-tram)
+  - [QA Teams:](#qa-teams)
+  - [SE Process:](#se-process)
+- [Lecture 17 Risk Management](#lecture-17-risk-management)
+  - [Risk Identification:](#risk-identification)
+  - [在项目的三个阶段进行Risk Analysis](#在项目的三个阶段进行risk-analysis)
+  - [Project management Concerns:](#project-management-concerns)
+  - [Recognizing and Controlling Risk:](#recognizing-and-controlling-risk)
+  - [Risk Planning:](#risk-planning)
 ## Lecture 02 Git projects
 
 ### git
@@ -586,4 +609,268 @@
   + 很难在项目过程中控制改动
   + 很难在项目的各种阶段衡量进程
 
-###
+### Agile Principles
++ 我们的首要原则是通过更快更连续性的递交有价值的软件来满足消费者 ``early and continuous delivery of valuable software``
++ Agile欢迎在开发过程中的需求变动，Agile processes 通过变化来赢得客户的竞争优势``customer's competitive advantage``
++ 经常交付工作软件，从几周到几个月，``with a preference to the shorter timescale``
++ 商业人士和开发团队必须每天在一起工作，在项目过程中
++ 围绕几个积极进取的个人搭建项目，给他们环境并支持他们
++ 最有效的在一个团队内信息传递方法就是面对面谈话``face-to-face conversation``
++ ``Working software is the primary measuer of progress``工作软件是工作流程的最重要衡量手段
++ Agile processes推动``sustainable development``可持续发展
++ ``Continuous attention``持续关注优秀的技术和好的设计可以提高``agility``敏捷性
++ ``Simplicity``简洁
++ 最好的架构，需求，设计来自于``self-organizing`` teams
++ 团队会倾向于变得更加高效
+
+### How to do Agile
++ Overall Approach:
+  + ``spiral model``螺旋模型是一种自适应的方式
+  + ``Agile principles`` 适用于我们的approach
++ Each Stage and Activity
+  + agile requirements: user stories but not requirements documentation
+  + agile design - prototypes but not specification documentations
+  + agile implementation - test driven paaired development
+
+### ``Scrum``, ``Kanban``, ``XP``
++ 这三个框架都是用于``Agile Principles``，他们分别有不同的关注点
++ Scrum is about optimising by: time and delivery
++ Kanban is about speed of delivery
++ XP is about team effectiveness
+
+### eXtreme Programming
++ XP 是一个较快的进行迭代开发的方式
+  + 新版本可能每天发布，或更频繁
+  + 每两周就把新增的变动提交给客户
+  + 每一个build被接受前都会经过测试
+  + 只有通过了所有测试的builds 才会被released
++ Principle or practice & Description:
+  + Incremental planning: 
+  + Small releases: 对于商业来说对有效益的那部分最先推送出来，release of the system是逐步递增的
+  + Simple design: 只要设计能符合现有的需求就好了，不需要更多了
+  + Test-first development: 用一个自动进行单元测试的框架来为马上要写的功能准备测试
+  + Refactoring: 所有开发者都期望 在发现有改进空间的时候 进行持续性的重构代码 这使得代码保持简单和maintainable
+  + Pair programming: 开发者成对工作，检查互相的工作内容
+  + Collective Ownership: 大家一起负责整个项目，每个人都可以改动任何东西，对每一个代码都负责
+  + Continuous Integration: 一旦这个任务的工作完成了，就会被整合为一个完整的系统，所有的单元测试都应该通过
+  + Sustainable pace: 要保持可持续性的节奏，太多的加班是不好的
+  + On-site customer: 客户是开发团队的一部分，并且有义务提供系统需求给团队
+
+
+### Scrum
++  一个轻型的架构``lightweight framework``，帮助团队和组织通过``adptive solutions``自适应方案来为复杂问题创造价值
++  主要关注于如何在一个团队搭建的开发环境下 管理任务 ``manage tasks within a team-based development environment``
++  Scrum Roles:Scrum架构下有一下三种觉醒
+   +  ``ScrumMaster``: keeper of the scrum process
+      +  让整个流程运行得更平滑
+      +  去除影响生产力的障碍
+      +  组织和促进关键会议
+   +  ``Product Owner``:唯一一个负责管理``Product Backlog``产品积压的人
+      +  expressing ``Product Backlog`` items
+      +  安排Backlog 条目来更好地实现目标
+      +  最优化团队工作的价值``optimizing the value of the work the Team performs``
+      +  确保Backlog是可视化的，透明的，对所有人都清晰的，然后展现出未来的工作规划``Visible, transparent, claer to all, shows what the Team will work on further``
+      +  确保团队理解Backlog中的条目
+   +  ``Team``：
+      +  包含了``analysts,designers,developers,testers``
+
++ Scrum Method:
+  + 1. Plan and outline what you will achieve规划并列出会实现什么
+  + 2. 设定一些``sprint cycles``周期来完成工作
+    + Sprint cycles: 是一段工作循环
+      + Assess -> Select -> Develop -> Review -> Assess
+  + 3. Document the current phase
+
+### Scrum Events:
++ ``Sprint``:
+  + 一个sprint是一段固定的，用于实现现有计划的 时间周期 e.g. 2-4 weeks
+  + sprints cycles are ``intermittent points``间歇点
+  + sprints 涵盖了持续性的团队交流：
+    + 比如，每天的例会
+  + sprints 由 ``Scrum Master``进行管理
++ ``Daily Scrum Meeting``：
+  + 一个快速会议，回顾上一个会议至今的工作，并且给下一个24小时制定工作计划
+  + 在会议过程中，每一个团队成员需要解释:
+    + TA 昨天做了什么来帮助团队实现Sprint Goal？
+    + TA 今天会做什么来帮助团队实现Sprint Goal？
++ ``Sprint Review``: 在每一个sprint阶段的结尾进行：
+  + 参加者包括Scrum团队和Product Owner邀请的关键的利益相关者``key stakeholders``
+  + ``Product Owners``解释已经完成和未完成的Backlog的条目
+  + 团队讨论在sprint过程中什么执行的很好，出现了什么问题，这些问题是怎么解决的
+  + 团队指出已完成的工作并且回答问题，如果有，就深入讨论
+  + 整个团队讨论接下来做什么
+  + Scrum Trams最后要回顾时间线，budget，可能的capabilities
+  + Sprint Review的阐述应该被更新进入Product Backlog
++ ``Sprint Retrospective``: 在每个Sprint Review后进行：
+  + 组合上一个Sprint学到的东西，不论是``people, relationship, process or tools``
+  + 指出做得好的``major items``和可能的提升``potential improvements``
+  + 制作一份``plan for implementing improvements to increase product quality``
++ ``Scrum Artifact`` Scrum 神器
+  + ``Product Backlog``:
+    +  An ``oerdered list`` of feßatures that are aprts of the end product
+    +  可以由Product Owner随时更新
+ +  ``Sprint Backlog``:
+    +  从Sprint中选取出来的Product Backlogs items，加上一份递交产品提升和实现Sprint Goal的计划
+ +  ``Increment``:
+    +  在一个Sprint期间完成的Product Backlog items综合加上之前所有Sprints阶段的increments
+
+### Kanba
++ Kanba: ``what shall we build next?`` (passing jobs on)
+  + 工作通过更新优先列表来驱动
++ 可以通过使用一个kanba board 来管理手头的工作
++ 通过限制列的数量来提高团队的效率
++ 用``Release Cycles``来衡量build 新特性花费的时间
+
+### Agile vs. Traditional
+|Traditional Methods|Agile Methods|
+|-------------------|-------------|
+|Waterfalll,V-Modle|Spiral,Iterative Models|
+|Requirements Tables|User Stories,Personas|
+|Detailed UML/Specs|Rapid Prototyping|
+|Integration Testing Phase|Test Driven Development, Paired Coding|
+|Formal User Testing|Frequent Client Interaction|
+|Separate Skill Teams|Integrated skills teams|
+
+### Waterfall Pros 优点：
++ 向前forward和向后backward的计划实施和实行都比较简单``palnning and implementation is easy``
++ waterfall model比较容易使用和理解，不需要特殊的训练，有一个比较简单的``learning curve``
++ waterfall model是很容易管理的
++ 各种阶段之间不会重叠，所以有更低的复杂度``less complexity``
++ 对于小的项目来说效果很好
++ 流程和结果都被很好的``well-documented``
++ 很容易衡量进程，因为每个阶段的开始和结尾一开始就被定好了``easy to measure the progress``
++ ``no financial surprises`` 一旦需求是确定了的，最后的价格从一开始就定好了
+
+### Waterfall Cons 缺点
++ 所有的需求都必须要在项目开始前明确，所以他拖延了项目 ``delays the project``
++ 需要针对用户需求进行额外的搜索，``requires extensive research``
++ 很难再接受其他的变化，有更低的灵活度``difficult to accommodate any such changes``
++ ``Slow delivery times``客户只有在最后交付的事后才可以看见产品
++ 客户没有被通知到这个项目的健康程度
++ ``High risk and uncertainty`` waterfall model中存在太多的很多没有被注意到的issues，这些问题延续到了项目结束才被发现
++ 在每个阶段内很难衡量进程
+
+### Agile Pros 优点：
++ ``Great adaptability``很强的适应能力，和灵活度``flexible``
++ 允许持续的``refine and re-prioritize`` the overall product backlog
++ Agile的方法鼓励了利益相关者参与项目
++ 固定的日程sprints (one to four weeks) 允许``early and predictable delivery`` 很早也可预见地交付
++ 有价值的客户反馈可以在项目初期就获得，比企鹅对项目作出改进
++ 通过制作``frequent builds``, ``any misalignment with the customer requirements can also be detected and fixed early``
++ Agile 能够推动团队工作
++ 在一个Agile项目中，there is a room for ``continuous improvement``存在不断改进的空间
+
+### Agile Cons 缺点:
++ Agile 团队比较容易倾向于忽视文档 ``tendency to neglect documentation``
++ 如果初始的设计和架构比较弱，那么后续需要频繁的代码重构``frequent refactoring``
++ 相比于waterfall，Agile是比较难进行训练的``difficult to practice``
++ 由于``time-boxed delivery and frequent re-priortizaton``，有可能有一些特性没有办法在分配的时间内交付，这可能会带来``additional sprints and additional costs``
+
+### Agile Methods:
++ Especially valuable for :
+  + 小型或中性项目
+  + 客户的系统开发有一个参与的客户
++ 但是
+  + 有一个长期参与开发的客户是并不容易的
+  + 团队成员并不总是有着``right personalities``
+  + 重要的任务花费时间，也有可能会被遗忘
+  + 公司的变化有可能是很慢的
+
+## Lecture 16 Software Quality
+
+### Software Quality Tram:
++ 选择一个好的SE Process
++ 确保SE Process的所有方面都完成得很好
+
+### QA Teams:
++ ``Quality Assurance Team``
+  + 这个团队应该是和开发团队区分开的，直接汇报给``managers above the project manager``
++ 3 things:
+  + Planning for Quality
+    + 给团队设定一个质量标准
+    + Quality Plan Document中需要有的部分：
+      + Product intro
+      + Product plans
+      + Process description
+      + ``Quality goals``: 最终产品的关键质量属性 critical quality attributes
+      + Risks & Risk management
+    + 推荐``Quality-promoting processes``质量提升流程
+  + Defining standards and procedures for the whole company
+    + ``Product Standards``: documentation standards, coding conventions, class structure
+    + ``Process Standards``:什么时候回顾／测试，在每个SE process都定义好的典范
+    + ``ISO Standards``
+  + Checking Quality 项目符合公司的标准
+    + Traditional Inspections:
+      + 一组3-7个人负责检测一个SE产出
+        + ``specific reviewers from QA team``
+        + project manager, senior designer
+        + 1 or 2 persons who built the thing being reviewd
+      + 大概两个小时
+      + 关注：
+        + ``find problems``, ``non-conformance to standards``
+        + ``检查完整性``，遗漏或错误的逻辑结构
+        + 代码块，流程表，测试，需求有没有意义
+      + ``Produce documentation`` 客户接受的质量证明
+    + Fault Class：
+      + ``Data faults``
+      + ``Control faults``
+      + ``I/O faults``
+      + ``Interface faults``
+      + ``Storage managment faults``
+      + ``Exception management faults``
+    + Measuring Quality:
+      + Safety
+      + Understandablity
+      + Portablility 可移植性ß
+        + 以上三点很难衡量，并且有时候是冲突的
+    + 可以实际上获得的数据：
+      + number of lines of code
+      + the Fog Index(readability of comments)
+      + number of reported faults reported after delivery
+      + number of persons days for coding
+
+
+### SE Process:
++ ``Software engineering process``适用于管理软件开发过程的模型
++ 通常涵盖以下技术：
+  + Analysis
+  + Design
+  + Coding
+  + Testing
+  + Maintenance
+
+## Lecture 17 Risk Management
+### Risk Identification:
++ Interview/Brainstorming
++ Voluntary Reporting
++ Decomposition
++ Critical Path Analysis
++ Assumption Analysis
++ Risk Taxonomies 风险分类，发生在其他项目中出现的问题可以被用作ckecklist检查本项目的潜在问题
+
+### 在项目的三个阶段进行Risk Analysis
++ Preliminary Risk Analysis：
+  + 帮助寻找到重要的requirements
++ Lifecycle Risk Analysis
+  + when system implementation decisions are made
++ Operational Risk Analysis
+  + when the user interaction design decisions are made
+
+### Project management Concerns:
++ 给客户准时交付软件
++ 将整体花费控制在预算内
++ 交付的软件应该符合客户的预期
++ 维护一个开心，功能强大的开发团队
+
+### Recognizing and Controlling Risk:
++ 建立一个``Risk Review Board(RRB)``
++ 每个职能和支持领域代表
++ Risks are documented and include a short description of 风险种类，严重程度，风险管理计划
++ Risk Types：
+  + ``Technology,People,Organizational,Tools,Requirements,Estimation``
+
+### Risk Planning:
++ Avoidance Strategies 减少风险发生
++ Minimization Strategies 减少风险发生的影响
++ Contingency plans 如果风险发生了，会怎么做
+  + 一般来说，avoidance strategies是最好的选择

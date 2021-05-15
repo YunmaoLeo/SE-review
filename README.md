@@ -25,6 +25,7 @@
   - [Specification](#specification)
   - [Specification review](#specification-review)
 - [Lecture 08 Prototypes](#lecture-08-prototypes)
+  - [3 Types of Prototypes:](#3-types-of-prototypes)
   - [Prototyping Risks](#prototyping-risks)
 - [Lecture 09 OODesignAndTestPlan](#lecture-09-oodesignandtestplan)
   - [Class Description Documents](#class-description-documents)
@@ -68,6 +69,7 @@
   - [Refactoring Code:](#refactoring-code)
   - [Emergency Changes](#emergency-changes)
 - [Lecture 15 Plan vs. Agile Methodologies](#lecture-15-plan-vs-agile-methodologies)
+  - [Four original values of Agile:](#four-original-values-of-agile)
   - [传统软件制作的问题 ``concern with Traditional Methods``](#传统软件制作的问题-concern-with-traditional-methods)
   - [Agile Principles](#agile-principles)
   - [How to do Agile](#how-to-do-agile)
@@ -277,6 +279,12 @@
   + ``Verifability checks`` 验证性检查，这些specifications都可以被测试吗？
 
 ## Lecture 08 Prototypes
+### 3 Types of Prototypes:
++ Prototypes fill a purpose:
+  + 1. Role of technology
+  + 2. Look and Feel
+  + 3. Implementation Guide
+
 
 ### Prototyping Risks
 + 为了高逼真度的原型花费了太多的时间或经历
@@ -602,6 +610,12 @@
     + 代码变得更加不可控制，不可维护了
 
 ## Lecture 15 Plan vs. Agile Methodologies
+### Four original values of Agile:
++ 1. ``Customer collaboration``: 客户也加入到开发团队中进行合作
++ 2. ``Working software`` is supported through small, frequent system releases
++ 3. ``Individuals and interactions`` through pair programming, collective owenership and a process that avoids long working hours
++ 4. ``Responding to Change`` through regular system releases
+
 
 ### 传统软件制作的问题 ``concern with Traditional Methods``
 + Waterfall 模型过于笨重了，很贵也很慢

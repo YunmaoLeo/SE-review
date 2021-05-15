@@ -50,6 +50,25 @@
   - [Release Testing Strategies](#release-testing-strategies)
   - [Difference of Integration vs. Release Testing:](#difference-of-integration-vs-release-testing)
   - [Acceptance Teting:](#acceptance-teting)
+- [Lecture 13 ConfigureationReleaseManagement](#lecture-13-configureationreleasemanagement)
+  - [为什么软件系统需要不停的迭代``evolution``](#为什么软件系统需要不停的迭代evolution)
+  - [软件控制是怎么实现的？](#软件控制是怎么实现的)
+  - [Version Control 版本控制](#version-control-版本控制)
+  - [Version Control - Branches](#version-control---branches)
+  - [Continuous Integration](#continuous-integration)
+  - [System buildings涵盖很多的软件信息和操作环境](#system-buildings涵盖很多的软件信息和操作环境)
+  - [System Integration and Building features 工具](#system-integration-and-building-features-工具)
+- [Lecture 14 Software Evolution and Reuse](#lecture-14-software-evolution-and-reuse)
+  - [Maintenance involves:](#maintenance-involves)
+  - [系统改变是不可避免的](#系统改变是不可避免的)
+  - [为什么change is expensive](#为什么change-is-expensive)
+  - [Early investment - saves later:](#early-investment---saves-later)
+  - [Change Management](#change-management)
+  - [Requirements Change Management](#requirements-change-management)
+  - [Refactoring Code:](#refactoring-code)
+  - [Emergency Changes](#emergency-changes)
+- [Lecture 15 Plan vs. Agile Methodologies](#lecture-15-plan-vs-agile-methodologies)
+  - [传统软件制作的问题 ``concern with Traditional Methods``](#传统软件制作的问题-concern-with-traditional-methods)
 ## Lecture 02 Git projects
 
 ### git
@@ -456,5 +475,115 @@
 + Branch for ``Teams``
 
 ### Continuous Integration
-+ Continuous Integration (CI) is the process of automating the build and testing of code
-+  every time a team member commits changes to version control
++ Continuous Integration (CI) is the process of automating the build and testing of code every time a team member commits changes to version control
++ 为什么我们需要CI呢？
+  + CI keeps the master branch up-to-date
+  + 每一次commit都出触发自动build和测试流程
+  + 从一开始就保证了是integration的
+  + 可以很快地发现bug
+  + 经常Release新的版本允许工程师被调动积极性，并提升整体的速率，可以有更多的迭代
+
+### System buildings涵盖很多的软件信息和操作环境
++ 源代码，外部库，数据文件，配置文件
++ 编译器的版本和其他软件工具
+
+### System Integration and Building features 工具
++ Build script generation
++ Version control system integration
++ Minimal recompilation
++ Executable system creation
++ Test automation
++ Reporting
++ Document generations
+
+## Lecture 14 Software Evolution and Reuse
+
+### Maintenance involves:
++ 改正原有的问题
++ 改进系统中单元的实现
++ 当发现有新的需求是，增强系统的服务
++ 通常来说是，维护是最长生命周期的部分
+
+### 系统改变是不可避免的
++ 公司更愿意更新现有的软件，
++ 因为移动到新的平台上会花费很多的人力和钱
++ 建立新的软件是有风险的，requirements中可能是有错误的
++ 新的软件可能要花更久的时间才能上线
++ 一个完整的新项目可能是很贵的
+
+### 为什么change is expensive
++ Team Changes: 开发团队会转移到下一个项目中去
++ Staff skills
++ Program Age and Structure: 旧的软件可能需要被变更，重新设计更多
++ Poor Development Practices
+  + 偷工减料，文档不足
+  + 更难进行维护
++ 代码难以阅读 ``low readability of code``
+
+### Early investment - saves later:
++ 公司在软件研发的过程多投入一些，可以为后续节省更多
+
+### Change Management
++ Fault Repairs
+  + fix coding errors 修正代码的错误
+  + 通常修改起来比较便宜
+  + 不需要进行重新设计
++ Environmental Adaption 环境适应
+  + 比如在新的系统平台上进行更新
+  + 修复起来有一些贵
+  + 但也不需要重新设计
++ Functionality Addition 增加新的功能
+  + 迎合商业需求
+  + 修复起来特别贵
+  + 通常需要重新设计``redesign``
++ ``Fault repair 17%`` 
++ ``Environmental adaption 18%`` 
++ ``Functionality addtion or modification 65%``
+
+
+### Requirements Change Management
++ 理解并控制requirement change的流程
++ requirement需要新的独一无二的ID，这样才能够被cross-referenced
++ Functionality Change:
+  + Problem Analysis & Change Specification:
+  + Change analysis and costing 改变的分析与消耗
+    + 把改动跟进到specification，估计改变的规模
+    + 预估花费 cost
+    + 决定要不要继续，在这个cost下
+  + Change Implementation
+    + 调整requirements
+    + 调整Documentation
+  + 不要随意的调整，不要从改动代码开始
+
+  <br>
+
+  + 对代码做出明智的改动是更好的选择，尽管这可能需要做出更多的改变
+  + refactoring code重构代码是推动程序进步来减缓``degradation``讲解的方法
+  + 也有人考虑``preventative maintenance``，预防性维护来减少未来改动的挑战
+  
+### Refactoring Code:
++ 冗余的，相似的代码，应该被制作成方法来调用
++ 很长的方法应该被分成几个片段
+
+
+### Emergency Changes
++ 通常发生的问题需要快速，紧急的变化
++ its best to ``document emergency changes``
+  + real danger:
+    + 需要进行多次的修复的情况出现了
+    + 这些掩盖了代码中的紧急问题
+    + 代码变得更加不可控制，不可维护了
+
+## Lecture 15 Plan vs. Agile Methodologies
+
+### 传统软件制作的问题 ``concern with Traditional Methods``
++ Waterfall 模型过于笨重了，很贵也很慢
++ 有很多的局限性
+  + 需要很多的文档
+  + 不同队伍之间需要有很长的等地时间
+  + 修改问题代码很expensive
+  + 对于开发者来说没有太多的自由空间
+  + 很难在项目过程中控制改动
+  + 很难在项目的各种阶段衡量进程
+
+###

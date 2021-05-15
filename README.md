@@ -94,6 +94,8 @@
   - [Risk Planning:](#risk-planning)
 - [Lecture 18 Project Management And Planning](#lecture-18-project-management-and-planning)
   - [Project Scheduling:](#project-scheduling)
+  - [PERT Charts](#pert-charts)
+  - [Gantt Charts](#gantt-charts)
 ## Lecture 02 Git projects
 
 ### git
@@ -883,3 +885,13 @@
 + 每一个activities应该能够创造一些可以被评估的产出，这样``progress can be assessed``
 + A milestone is the end point of an activity
 + Deliverables are results delivered to customers
+
+### PERT Charts
++ 主要针对互相之间有依赖性或平行关系的任务
++ Critical Path
+  + 最长的路径就是critical path
+  + 这可以帮助估算最坏的情况
+  + ``Bottleneck Route``
+
+### Gantt Charts
+横轴是按week计算的时间，纵轴是任务及相对应的时间轴

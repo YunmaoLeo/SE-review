@@ -427,3 +427,34 @@
   + Alpha testing: 先由一群和开发团队工作接触较多的客户进行第一批测试
   + Beta testing: 更大批的一群客户在开发环境提出问题
   + Acceptance testing: 客户测试系统，并决定接受还是拒绝
+
+## Lecture 13 ConfigureationReleaseManagement
+### 为什么软件系统需要不停的迭代``evolution``
++ 1. bugs 会被不断地发现然后被修复
++ 2. 硬件和系统平台的新版本会更新出来
++ 3. 竞争者会提供越来越多的新特性
++ 4. 系统的requiremrnt改变了
+
+### 软件控制是怎么实现的？
++ Having a ``workflow across stages``
++ Configuration Management (CM) is concerned with management of evolving systems
+  + 1. 版本控制：持续追踪系统组件的多个版本
+  + 2. Continues Integration：自动将改动的代码转换为一个整体的系统
+  + 3. Build Configurations: : assembling components, data and libraries to create an executable system.
+  + 4. Automatic Deployment
+
+### Version Control 版本控制
++ 为什么需要版本控制
+  + 版本控制可以实现整个软件开发团队中的协调，共享与合作
+  + 版本控制可以让团队以分布式``distributed``和异步``asynchronous``方式工作
+  + 版本控制软件可以解决冲突和相关的异常现象
+### Version Control - Branches
++ Branch for ``release``
++ Branch for ``Maintenance``
++ Branch for ``Features``
+  + 为了开发新特性创建了一个开发分支
++ Branch for ``Teams``
+
+### Continuous Integration
++ Continuous Integration (CI) is the process of automating the build and testing of code
++  every time a team member commits changes to version control

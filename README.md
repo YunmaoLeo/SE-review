@@ -92,6 +92,8 @@
   - [Project management Concerns:](#project-management-concerns)
   - [Recognizing and Controlling Risk:](#recognizing-and-controlling-risk)
   - [Risk Planning:](#risk-planning)
+- [Lecture 18 Project Management And Planning](#lecture-18-project-management-and-planning)
+  - [Project Scheduling:](#project-scheduling)
 ## Lecture 02 Git projects
 
 ### git
@@ -874,3 +876,10 @@
 + Minimization Strategies 减少风险发生的影响
 + Contingency plans 如果风险发生了，会怎么做
   + 一般来说，avoidance strategies是最好的选择
+
+## Lecture 18 Project Management And Planning
+
+### Project Scheduling:
++ 每一个activities应该能够创造一些可以被评估的产出，这样``progress can be assessed``
++ A milestone is the end point of an activity
++ Deliverables are results delivered to customers

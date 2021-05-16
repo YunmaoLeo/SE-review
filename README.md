@@ -847,6 +847,16 @@
       + number of reported faults reported after delivery
       + number of persons days for coding
 
+  + Why somtimes QA team can cause a project risk:
+    + The risk is that the Quality Assurance Team become the nasty people that make you have to do unnecessary work
+  + Four Thinghs of QA team:
+    + Planning for Quality
+    + Checking Standards
+    + Checking for Quality
+      + Identifying points for inspections
+      + Identifying relevant measures
+
+
 
 ### SE Process:
 + ``Software engineering process``适用于管理软件开发过程的模型

@@ -111,6 +111,9 @@
   + 可以把里程碑和``issues`` ``pull request``结合在一起
 
 ## Lecture 03 Requirements
+### What is Software Engineering:
++ Software Engineering is the process of examining and termining users needs, developing and designing it, building and forming and testing then end-user software to see if it pleases their needs through software programming languages.
+
 
 ### SE Processes:
 + Specification: design the system for the customer 为客户设计系统

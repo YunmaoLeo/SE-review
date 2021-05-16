@@ -3,6 +3,8 @@
 - [Lecture 02 Git projects](#lecture-02-git-projects)
   - [git](#git)
 - [Lecture 03 Requirements](#lecture-03-requirements)
+  - [What is Software Engineering:](#what-is-software-engineering)
+  - [Main Activities of Requirements Engineering](#main-activities-of-requirements-engineering)
   - [SE Processes:](#se-processes)
   - [Requirements Elicitation 需求启发](#requirements-elicitation-需求启发)
   - [Stakeholder Analysis](#stakeholder-analysis)

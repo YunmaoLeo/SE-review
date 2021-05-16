@@ -114,6 +114,11 @@
 ### What is Software Engineering:
 + Software Engineering is the process of examining and termining users needs, developing and designing it, building and forming and testing then end-user software to see if it pleases their needs through software programming languages.
 
+### Main Activities of Requirements Engineering
++ Requirements Elicitation: discovery, classify and organize the requiremtns throught various approaches
++ Requirements Specification: System requirements speciication and modeling, user requirements specification and business requirements specification
++ Requirements validation: reviews, prototyping and feasibility study
++ System requirements document
 
 ### SE Processes:
 + Specification: design the system for the customer 为客户设计系统

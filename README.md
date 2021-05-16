@@ -922,7 +922,7 @@
 + 主要针对互相之间有依赖性或平行关系的任务
 + Critical Path
   + 最长的路径就是critical path
-  + 这可以帮助估算最坏的情况
+  + 这可以帮助估算最坏的情况 ``helps cost the effort for the worst case``
   + ``Bottleneck Route``
 
 ### Gantt Charts

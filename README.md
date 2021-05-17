@@ -118,9 +118,9 @@
 
 ### Main Activities of Requirements Engineering
 + Requirements Elicitation: discovery, classify and organize the requiremtns throught various approaches
-+ Requirements Specification: System requirements speciication and modeling, user requirements specification and business requirements specification
++ Requirements Definition
 + Requirements validation: reviews, prototyping and feasibility study
-+ System requirements document
++ System requirements documentation
 
 ### SE Processes:
 + Specification: design the system for the customer 为客户设计系统
